@@ -1,0 +1,40 @@
+.modal {
+  position: absolute;
+  background-color: #f5f7f9;
+  border-radius: 5px;
+  border: 1px solid $active-color;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px 30px;
+  min-width: 200px;
+  z-index: 5;
+
+  input {
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  label {
+    align-self: flex-start;
+    font-weight: 700;
+    font-size: 14px;
+    color: #555555;
+
+  }
+  button {
+    background-color: $active-color;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 20px;
+    align-self: center;
+    letter-spacing: 1px;
+  }
+}
+.header .modal {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}

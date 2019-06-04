@@ -1,0 +1,28 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kam1Cadzee/test-task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kam1Cadzee/test-task/issues"
+  },
+  "homepage": "https://github.com/Kam1Cadzee/test-task#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {
+    "handlebars": "^4.1.2"
+  }
+}

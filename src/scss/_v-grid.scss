@@ -1,0 +1,99 @@
+$mobile-first: false !default;
+
+
+$b-xs: 360px;
+$b-sm: 500px;
+$b-md: 450px;
+$b-lg: 800px;
+$b-xl: 1130px;
+
+
+$grid-columns: 12;
+$max-width: 1170 !default;
+$grid-gutter-width: 30px;
+
+@mixin media-up($break) {
+  @media screen and (min-width: $break) {
+    @content;
+  }
+}
+@mixin media-down($break) {
+  @media screen and (max-width: $break) {
+    @content;
+  }
+}
+
+@mixin media($break) {
+
+  @if($mobile-first) {
+    @include media-up($break) {
+      @content;
+    }
+  }
+  @else {
+    @include media-down($break) {
+      @content;
+    }
+  }
+}
+
+
+
+@mixin container($width: null) {
+  @if($width == null) {
+    width: 80%;
+  }
+  @else {
+    width: $width;
+  }
+
+  padding-right: ($grid-gutter-width / 2);
+  padding-left: ($grid-gutter-width / 2);
+  margin-right: auto;
+  margin-left: auto;
+}
+@mixin row() {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: ($grid-gutter-width / -2);
+  margin-left: ($grid-gutter-width / -2);
+
+
+}
+@mixin col() {
+  position: relative;
+  margin-right: ($grid-gutter-width / 2);
+  margin-left: ($grid-gutter-width / 2);
+  box-sizing: border-box;
+}
+
+@mixin set-flex($size: auto, $grow: 0) {
+  @if($size == auto){
+    flex: $grow 0 #{$size};
+  }
+  @else {
+    flex: $grow 0 calc(100% / #{$grid-columns} * #{$size} - #{$grid-gutter-width});
+  }
+}
+@mixin make-col($size: auto, $breakpoint: null, $grow: 0) {
+  @if($breakpoint == null) {
+    @include set-flex($size, $grow);
+  }
+  @else {
+    @include media($breakpoint) {
+      @include set-flex($size, $grow);
+    }
+  }
+}
+@mixin margin-b() {
+  margin-bottom: $grid-gutter-width;
+}
+
+@mixin init-flex($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+}
+@mixin width-by-context($target, $context) {
+  width: $target / $context * 100%;
+
+}

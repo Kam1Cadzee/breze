@@ -1,0 +1,29 @@
+.main-menu {
+  background-color: #f5f7f9;
+  display: flex;
+  margin: 20px 0;
+
+  @include media(650px) {
+    display: none;
+  }
+
+
+  &__item {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #444444;
+    font-size: 14px;
+    padding: 20px;
+
+    &:not(&_active):hover {
+      background-color: rgba(89, 183, 194, .5);
+      transition: transform 200ms, background-color 200ms;
+      transform: scale(.95);
+
+    }
+    &_active {
+      background-color: #59b7c2;
+      color: #ffffff;
+    }
+  }
+}

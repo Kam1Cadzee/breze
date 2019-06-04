@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="header-top">
+  <div class="container">
+    <div class="phone header-top__phone">
+      <img src="img/icon_phone.png" alt="">
+      <div class="phone__text font-segoe">Call Us +777 (100) 1234</div>
+    </div>
+    <p class="header-top__text font-bitter">Welcome visitor you can
+      <a class="ref" href="#">login</a> or
+      <a class="ref" href="#">create an account</a>.
+    </p>
+    <div class="header-top__wrp">
+      <div class="header-top__pos">
+        <button type="button" class="btn header-top__btn  header-top__btn_m">EN
+        </button>
+        <div id="header-top-lang" class="header-top__block font-segoe">
+          <button data-index="0" type="button" class="btn header-top__btn header-top__btn_active">EN</button>
+          <button data-index="1" type="button" class="btn header-top__btn">FR</button>
+          <button data-index="2" type="button" class="btn header-top__btn">GM</button>
+        </div>
+      </div>
+      <div class="header-top__pos">
+        <button type="button" class="btn header-top__btn  header-top__btn_m">$
+        </button>
+        <div id="header-top-value" class="header-top__block font-bitter">
+          <button data-index="0" type="button" class="btn header-top__btn header-top__btn_active">$</button>
+          <button data-index="1" type="button" class="btn header-top__btn">€</button>
+          <button data-index="2" type="button" class="btn header-top__btn">£</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<header class="header container">
+  <div class="logo header__logo font-bitter">
+    <img src="img/logo.png" alt="logo">
+    <p class="logo__text">Online Store Theme</p>
+  </div>
+  <span class="header__input">
+     <input class="input font-segoe" type="text" placeholder="Search entire store here...">
+  </span>
+
+  <div id="header-modal" class="header__wrp">
+    <ul class="user-menu header__user-menu font-segoe">
+      <li><a class="user-menu__item" href="#">My Account</a></li>
+      <li><a class="user-menu__item" href="#">My Wishlist</a></li>
+      <li><a data-template="template-sign-in" id="log-in" class="user-menu__item" href="#">Log In</a></li>
+      <li><a data-template="template-sign-up" id="sign-up" class="user-menu__item" href="#">Sign Up</a></li>
+    </ul>
+    <button type="button" class="btn header__btn font-segoe">
+      <img src="img/icon_cart.png" alt="">
+      <span>Cart $0.00</span>
+    </button>
+  </div>
+</header>
+<div class="container">
+  <button id="btn-menu" type="button" class="btn btn-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav id="menu" class="main-menu font-bitter">
+    <a href="#" class="main-menu__item main-menu__item_active">Home</a>
+    <a href="#" class="main-menu__item">Solids</a>
+    <a href="#" class="main-menu__item">Liquids</a>
+    <a href="#" class="main-menu__item">Spray</a>
+    <a href="#" class="main-menu__item">Electric</a>
+    <a href="#" class="main-menu__item">For cars</a>
+  </nav>
+</div>
+<div class="container">
+  <div id="slider" class="slider">
+    <div class="slider__wrp">
+      <div class="slider__item">
+        <div class="slider__img">
+          <img src="img/Breeze.png" alt="">
+        </div>
+        <div class="slider__content font-bitter">
+          <h3 class="slider__title slider__text">Breeze Noticeables</h3>
+          <p class="slider__decs slider__text">The new series of natural air fresheners.</p>
+          <p class="slider__decs slider__text">Febreze Noticeables Meadows & Rain</p>
+          <p class="slider__decs slider__text">Air Freshener Refill.</p>
+        </div>
+      </div>
+      <div class="slider__item">
+        <div class="slider__img">
+          <img src="img/buildings.jpg" alt="">
+        </div>
+        <!--      <div class="slider__text">-->
+        <!--        <h3 class="slider__title">Breeze Noticeables</h3>-->
+        <!--        <p class="slider__decs">The new series of natural air fresheners.-->
+        <!--                                Febreze Noticeables Meadows & Rain-->
+        <!--                                Air Freshener Refill.</p>-->
+        <!--      </div>-->
+      </div>
+      <div class="slider__item">
+        <div class="slider__img">
+          <img src="img/holiday.jpg" alt="">
+        </div>
+        <!--      <div class="slider__text">-->
+        <!--        <h3 class="slider__title">Breeze Noticeables</h3>-->
+        <!--        <p class="slider__decs">The new series of natural air fresheners.-->
+        <!--                                Febreze Noticeables Meadows & Rain-->
+        <!--                                Air Freshener Refill.</p>-->
+        <!--      </div>-->
+      </div>
+    </div>
+
+    <button id="btn-left" class="btn slider__btn slider__btn_left" type="button"><img src="img/arrow-left.png"
+                                                                                      alt="left"></button>
+    <button id="btn-right" class=" btn slider__btn slider__btn_right" type="button"><img src="img/arrow-right.png"
+                                                                                         alt="right"></button>
+    <div id="slider-controls" class="slider__controls">
+      <span data-index="0" class="slider__page slider__page_active"></span>
+      <span data-index="1" class="slider__page"></span>
+      <span data-index="2" class="slider__page"></span>
+    </div>
+  </div>
+</div>
+<section class="banners container">
+  <div class="row">
+    <div class="banner font-bitter">
+      <div class="banner__img">
+        <img src="img/sale.png" alt="">
+      </div>
+      <div class="banner__info">
+        <h3 class="banner__title">Best price</h3>
+        <p class="banner__subtitle">this week</p>
+      </div>
+    </div>
+    <div class="banner font-bitter">
+      <div class="banner__img">
+        <img src="img/thumb_breeze.png" alt="">
+      </div>
+      <div class="banner__info">
+        <h3 class="banner__title">New smells</h3>
+        <p class="banner__subtitle">in the next series</p>
+      </div>
+    </div>
+    <div class="banner font-bitter">
+      <div class="banner__img">
+        <img src="img/code.png" alt="">
+      </div>
+      <div class="banner__info">
+        <h3 class="banner__title">Only natural</h3>
+        <p class="banner__subtitle">air fresheners</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+<script src="src/js/script.js"></script>
+<script id="template-sign-in" type="text/x-handlebars-template">
+  <form action="#" id="modal" class="modal font-segoe">
+    <label for="email">Username or email address</label>
+    <input id="email" type="text">
+    <label for="passwrod">Password</label>
+    <input id="passwrod" type="password">
+    <button type="submit" class="btn font-segoe">Sign In</button>
+  </form>
+</script>
+<script id="template-sign-up" type="text/x-handlebars-template">
+  <form action="#" id="modal" class="modal font-segoe">
+    <label for="name">Username</label>
+    <input id="name" type="text">
+    <label for="email">Email</label>
+    <input id="email" type="text">
+    <label for="password">Password</label>
+    <input id="password" type="password">
+    <button type="submit" class="btn font-segoe">Sign Up</button>
+  </form>
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+.header-top {
+  background-color: #dde4ec; }
+  .header-top .container {
+    display: flex;
+    align-items: center; }
+  .header-top__block {
+    display: flex; }
+  .header-top__btn {
+    background-color: #e6e9ed;
+    padding: 20px 15px;
+    color: #444444; }
+    .header-top__btn + .header-top__btn {
+      margin-left: 2px; }
+    .header-top__btn_active {
+      color: #ffffff;
+      font-weight: 700; }
+
+.phone {
+  display: flex;
+  align-items: center; }

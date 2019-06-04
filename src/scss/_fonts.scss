@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Segoe';
+  src: url('../fonts/SegoeUI.eot');
+  src: url('../fonts/SegoeUI.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/SegoeUI.woff') format('woff'),
+  url('../fonts/SegoeUI.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Segoe';
+  src: url('../fonts/SegoeUI-Bold.eot');
+  src: url('../fonts/SegoeUI-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/SegoeUI-Bold.woff') format('woff'),
+  url('../fonts/SegoeUI-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Segoe';
+  src: url('../fonts/SegoeUI-Light.eot');
+  src: url('../fonts/SegoeUI-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/SegoeUI-Light.woff') format('woff'),
+  url('../fonts/SegoeUI-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700');
+
