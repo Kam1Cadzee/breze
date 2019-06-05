@@ -1,70 +1,80 @@
-const slider = document.querySelector('#slider');
-const sliderItems = slider.querySelectorAll('.slider__item');
-const sliderPages = slider.querySelectorAll('.slider__page');
-const sliderControls = slider.querySelector('#slider-controls');
+class Slider {
+  constructor(slider) {
+    this.slider = slider;
+    this.sliderItems = this.slider.querySelectorAll('.slider__item');
+    this.sliderPages = this.slider.querySelectorAll('.slider__page');
+    this.sliderControls = this.slider.querySelector('#slider-controls');
+    this.btnRight = this.slider.querySelector('#btn-right');
+    this.btnLeft = this.slider.querySelector('#btn-left');
 
-let index = 0;
-let hasNextSlide = false;
-const lenght = sliderItems.length;
+    this.index = 0;
+    this.hasNextSlide = false;
 
-const btnRight = slider.querySelector('#btn-right');
-const btnLeft = slider.querySelector('#btn-left');
+    this.btnLeft.addEventListener('click', this.handleClickMoveSlide);
+    this.btnRight.addEventListener('click', this.handleClickMoveSlide);
+    this.sliderControls.addEventListener('click', this.handleClickMoveSlide);
 
-btnLeft.addEventListener('click', handleClickMoveSlide);
-btnRight.addEventListener('click', handleClickMoveSlide);
-sliderControls.addEventListener('click', handleClickMoveSlide);
-
-autoStartSlider();
-
-function handleClickMoveSlide(e) {
-  let nextIndex;
-  if(e.currentTarget === btnRight) {
-    nextIndex = (index + 1) % lenght;
+    this.autoStartSlider();
   }
-  else if(e.currentTarget === btnLeft) {
-    nextIndex = index - 1 < 0 ? lenght - 1: index - 1;
+
+  get length() {
+    return this.sliderItems.length;
   }
-  else {
-    nextIndex = e.target.dataset.index;
-    if(!nextIndex) {
-      return;
+
+  handleClickMoveSlide = e => {
+    let nextIndex;
+    if(e.currentTarget === this.btnRight) {
+      nextIndex = (this.index + 1) % this.length;
     }
-
-  }
-  changeSlide(nextIndex);
-}
-
-function changeSlide(nextIndex) {
-  [...sliderItems].forEach(item => item.style.transform = `translateX(-${nextIndex * 100}%`);
-  changeActivePage(index, nextIndex);
-  index = nextIndex;
-}
-function changeActivePage(prevIndex, nextIndex)
-{
-  sliderPages[prevIndex].classList.remove('slider__page_active');
-  sliderPages[nextIndex].classList.add('slider__page_active');
-}
-
-function autoStartSlider() {
-  if(window.innerWidth <= 450) {
-    slider.addEventListener('click', e => {
-      hasNextSlide = true;
-      nextSlide();
-    });
-    setInterval(() => {
-      if(hasNextSlide) {
-        hasNextSlide = false;
+    else if(e.currentTarget === this.btnLeft) {
+      nextIndex = this.index - 1 < 0 ? this.length - 1: this.index - 1;
+    }
+    else {
+      nextIndex = e.target.dataset.index;
+      if(!nextIndex) {
+        return;
       }
-      else {
-        nextSlide();
-      }
-    }, 2000);
+
+    }
+    this.changeSlide(nextIndex);
+  }
+
+  changeSlide = nextIndex => {
+    [...this.sliderItems].forEach(item => item.style.transform = `translateX(-${nextIndex * 100}%`);
+    this.changeActivePage(this.index, nextIndex);
+    this.index = nextIndex;
+  }
+
+  changeActivePage = (prevIndex, nextIndex) =>
+  {
+    this.sliderPages[prevIndex].classList.remove('slider__page_active');
+    this.sliderPages[nextIndex].classList.add('slider__page_active');
+  }
+
+  autoStartSlider = () => {
+    if(window.innerWidth <= 450) {
+      this.slider.addEventListener('click', e => {
+        this.hasNextSlide = true;
+        this.nextSlide();
+      });
+      setInterval(() => {
+        if(this.hasNextSlide) {
+          this.hasNextSlide = false;
+        }
+        else {
+          this.nextSlide();
+        }
+      }, 2000);
+    }
+  }
+  nextSlide = () => {
+    let nextIndex = (this.index + 1) % this.length;
+    this.changeSlide(nextIndex);
   }
 }
-function nextSlide() {
-  let nextIndex = (index + 1) % lenght;
-  changeSlide(nextIndex);
-}
+
+const slider = new Slider(document.querySelector('#slider'));
+
 
 const langueges = {
   index: 0,
