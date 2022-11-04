@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Kam1Cadzee/test-task#readme",
   "devDependencies": {
     "browser-sync": "^2.24.6",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-sass": "^4.0.1"
   },
